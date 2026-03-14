@@ -1,0 +1,115 @@
+.caption-about {
+    color: rgb(255, 255, 255);
+    padding-right: 30px;
+    white-space: nowrap;
+    margin-bottom: 25px;
+}
+
+.caption-about::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    height: 1px;
+    background-color: #ffffff;
+    margin-left: 0.5em;
+}
+
+.about-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: dense;
+    gap: 25px;
+}
+
+.about-item {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.item-abb {
+    padding: 5px;
+
+}
+
+.item-col-1 {
+    grid-column: span 1;
+}
+
+.item-col-2 {
+    grid-column: span 2;
+}
+
+.item-row-1 {
+    grid-row: span 1;
+}
+
+.item-row-2 {
+    grid-row: span 2;
+}
+
+.item-row-3 {
+    grid-row: span 3;
+}
+
+.img-icons {
+    width: 40px;
+}
+
+.stack-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stack-text {
+    border: 1px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.stack-text:nth-child(even) {
+    animation-name: move-up-and-right;
+}
+
+.stack-text:nth-child(odd) {
+    animation-name: move-down-and-left;
+}
+
+@keyframes move-up-and-right {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(2px, -2px);
+    }
+}
+
+@keyframes move-down-and-left {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-2px, 2px);
+    }
+}
+
+@media (max-width: 700px) {
+    .about-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .caption-about::after {
+        width: 50%;
+    }
+}

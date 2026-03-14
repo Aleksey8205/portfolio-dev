@@ -1,0 +1,26 @@
+.footer {
+    padding-top: 25px;
+    align-content: center;
+    justify-items: center;
+}
+
+.social-list {
+    margin: 0;
+    display: flex;
+    gap: 45px;
+    padding: 0;
+}
+
+.social {
+    list-style-type: none;
+}
+
+
+.social-img {
+    width: 50px;
+}
+
+.license-text {
+    padding-top: 15px;
+    color: rgb(255, 255, 255);
+}
